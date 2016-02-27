@@ -1,6 +1,11 @@
 { "dependencies" :
     {
       "node-neurosky" : "0.0.1",
-      "ws" : "1.0.1"
+      "ws" : "1.0.1",
+      "express": "~4.12.2",
+      "express-handlebars": "^2.0.1",
+      "connect-flash": "^0.1.1",
+      "express-session": "^1.11.2",
+      "body-parser": "^1.14.2"
     }
 }
