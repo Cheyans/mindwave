@@ -14,69 +14,53 @@ meditation = [];
 // bind receive data event
 client.on('data', function(data) {
   // if websocket server is running
-  if (wss) {
-    // broadcast this latest data packet to all connected clients
-    wss.broadcast(data);
-  }
-  //var high_alpha = [];
-  //var low_alpha = [];
-
-
-	if(data.poorSignalLevel) {
-		console.log("Signal Strength: " + parseInt(data.poorSignalLevel));
-	} else if (data.blinkStrength) {
-		console.log(data);
-	} else if (data.poorSignalLevel < 25 && data.eSense.attention > 0 && data.eSense.meditation > 0) {
-    current_tick++;
-    attention.push(data.eSense.attention);
-    meditation.push(data.eSense.meditation);
-    if (current_tick % tick == 0) {
-      //find average
-      var med_sum = 0;
-      meditation.forEach(function(val) {
-        med_sum += val;
-      });
-      var atten_sum = 0;
-			attention.forEach(function(val) {
-        atten_sum += val;
-      });
-      var med_avg = med_sum / tick;
-      var atten_avg = atten_sum / tick;
-
-      //then push results to a command on the device
-      console.log("Avg Med: " + parseInt(med_avg));
-      console.log("Avg Atten: " + parseInt(atten_avg));
-
-			//empty array
-			attention = [];
-			meditation = [];
-    }
-
-  }
-
+	console.log(data);
+	// if(data.poorSignalLevel) {
+	// 	console.log("Signal Strength: " + parseInt(data.poorSignalLevel));
+	// } else if (data.blinkStrength) {
+	// 	console.log(data);
+	// } else if (data.poorSignalLevel < 25 && data.eSense.attention > 0 && data.eSense.meditation > 0) {
+  //   current_tick++;
+  //   attention.push(data.eSense.attention);
+  //   meditation.push(data.eSense.meditation);
+  //   if (current_tick % tick == 0) {
+  //     //find average
+  //     var med_sum = 0;
+  //     meditation.forEach(function(val) {
+  //       med_sum += val;
+  //     });
+  //     var atten_sum = 0;
+	// 		attention.forEach(function(val) {
+  //       atten_sum += val;
+  //     });
+  //     var med_avg = med_sum / tick;
+  //     var atten_avg = atten_sum / tick;
+	//
+  //     //then push results to a command on the device
+  //     console.log("Avg Med: " + parseInt(med_avg));
+  //     console.log("Avg Atten: " + parseInt(atten_avg));
+	// 		remoteWSS.broadcast(med_avg);
+	// 		//empty array
+	// 		attention = [];
+	// 		meditation = [];
+  //   }
+  // }
 });
-// initiate connection
-client.connect();
-/** END connect to neurosky **/
 
-/** BEGIN start our websocket server **/
-// start websocket server to broadcast
-var wss = new WebSocketServer({
+client.connect();
+
+var mindwaveWSS = new WebSocketServer({
   port: 8080
 });
 
+var remoteWSS = new WebSocketServer({
+	port: 8000
+})
+
 // broadcast function (broadcasts message to all clients)
-wss.broadcast = function(data) {
-  for (var i in this.clients)
-    this.clients[i].send(data);
-};
-
-// bind each connection
-wss.on('connection', function(ws) {
-  ws.on('message', function(message) {
-    //filter out any bad data
-
-    console.log('[CLIENT]  %s', message);
+remoteWSS.broadcast = function (data) {
+	console.log("broadcasting");
+  mindwaveWSS.clients.forEach(function each(client) {
+    client.send(data);
   });
-  ws.send('You are connected to Mindwave Mobile');
-});
+};

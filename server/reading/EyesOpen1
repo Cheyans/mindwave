@@ -1,0 +1,266 @@
+{ poorSignalLevel: 200, status: 'scanning' }
+{ poorSignalLevel: 200, status: 'scanning' }
+{ poorSignalLevel: 200, status: 'scanning' }
+{ poorSignalLevel: 200, status: 'scanning' }
+{ poorSignalLevel: 200, status: 'scanning' }
+{ poorSignalLevel: 200, status: 'scanning' }
+{ poorSignalLevel: 200, status: 'scanning' }
+{ poorSignalLevel: 200, status: 'scanning' }
+{ poorSignalLevel: 200, status: 'scanning' }
+{ eSense: { attention: 51, meditation: 34 },
+  eegPower:
+   { delta: 8247,
+     theta: 4886,
+     lowAlpha: 1670,
+     highAlpha: 3168,
+     lowBeta: 2452,
+     highBeta: 6179,
+     lowGamma: 2584,
+     highGamma: 1887 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 53, meditation: 29 },
+  eegPower:
+   { delta: 9412,
+     theta: 11615,
+     lowAlpha: 752,
+     highAlpha: 9459,
+     lowBeta: 7892,
+     highBeta: 4706,
+     lowGamma: 2765,
+     highGamma: 998 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 61, meditation: 29 },
+  eegPower:
+   { delta: 4871,
+     theta: 6066,
+     lowAlpha: 6198,
+     highAlpha: 3076,
+     lowBeta: 4528,
+     highBeta: 6605,
+     lowGamma: 1971,
+     highGamma: 2907 },
+  poorSignalLevel: 0 }
+{ blinkStrength: 43 }
+{ eSense: { attention: 63, meditation: 23 },
+  eegPower:
+   { delta: 65000,
+     theta: 42896,
+     lowAlpha: 9840,
+     highAlpha: 7660,
+     lowBeta: 4750,
+     highBeta: 11710,
+     lowGamma: 2552,
+     highGamma: 3052 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 63, meditation: 16 },
+  eegPower:
+   { delta: 4394,
+     theta: 12154,
+     lowAlpha: 2637,
+     highAlpha: 5340,
+     lowBeta: 15711,
+     highBeta: 14279,
+     lowGamma: 4379,
+     highGamma: 1457 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 64, meditation: 21 },
+  eegPower:
+   { delta: 5843,
+     theta: 13879,
+     lowAlpha: 9545,
+     highAlpha: 6536,
+     lowBeta: 4668,
+     highBeta: 7717,
+     lowGamma: 2111,
+     highGamma: 1154 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 53, meditation: 23 },
+  eegPower:
+   { delta: 14947,
+     theta: 14556,
+     lowAlpha: 4516,
+     highAlpha: 17990,
+     lowBeta: 12511,
+     highBeta: 4849,
+     lowGamma: 1900,
+     highGamma: 846 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 51, meditation: 38 },
+  eegPower:
+   { delta: 19012,
+     theta: 37906,
+     lowAlpha: 23634,
+     highAlpha: 74757,
+     lowBeta: 23589,
+     highBeta: 21011,
+     lowGamma: 1802,
+     highGamma: 1108 },
+  poorSignalLevel: 0 }
+{ blinkStrength: 43 }
+{ eSense: { attention: 20, meditation: 41 },
+  eegPower:
+   { delta: 230583,
+     theta: 190785,
+     lowAlpha: 45344,
+     highAlpha: 12346,
+     lowBeta: 29171,
+     highBeta: 6811,
+     lowGamma: 946,
+     highGamma: 3443 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 17, meditation: 53 },
+  eegPower:
+   { delta: 7180,
+     theta: 7082,
+     lowAlpha: 15915,
+     highAlpha: 19948,
+     lowBeta: 3514,
+     highBeta: 9847,
+     lowGamma: 1545,
+     highGamma: 1965 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 7, meditation: 53 },
+  eegPower:
+   { delta: 128895,
+     theta: 210449,
+     lowAlpha: 92620,
+     highAlpha: 62447,
+     lowBeta: 33073,
+     highBeta: 11475,
+     lowGamma: 2063,
+     highGamma: 1208 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 1, meditation: 44 },
+  eegPower:
+   { delta: 8545,
+     theta: 29301,
+     lowAlpha: 14538,
+     highAlpha: 13183,
+     lowBeta: 17388,
+     highBeta: 4244,
+     lowGamma: 1908,
+     highGamma: 1597 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 14, meditation: 69 },
+  eegPower:
+   { delta: 8658,
+     theta: 5214,
+     lowAlpha: 17770,
+     highAlpha: 44214,
+     lowBeta: 9167,
+     highBeta: 8595,
+     lowGamma: 1980,
+     highGamma: 1333 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 16, meditation: 48 },
+  eegPower:
+   { delta: 21092,
+     theta: 20990,
+     lowAlpha: 2673,
+     highAlpha: 5551,
+     lowBeta: 6224,
+     highBeta: 8870,
+     lowGamma: 1661,
+     highGamma: 1509 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 41, meditation: 47 },
+  eegPower:
+   { delta: 2534,
+     theta: 5891,
+     lowAlpha: 7036,
+     highAlpha: 9858,
+     lowBeta: 15761,
+     highBeta: 9412,
+     lowGamma: 2333,
+     highGamma: 1807 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 51, meditation: 41 },
+  eegPower:
+   { delta: 7012,
+     theta: 6151,
+     lowAlpha: 1811,
+     highAlpha: 32275,
+     lowBeta: 7339,
+     highBeta: 4153,
+     lowGamma: 1063,
+     highGamma: 917 },
+  poorSignalLevel: 0 }
+{ blinkStrength: 43 }
+{ eSense: { attention: 43, meditation: 54 },
+  eegPower:
+   { delta: 64677,
+     theta: 37246,
+     lowAlpha: 14431,
+     highAlpha: 42631,
+     lowBeta: 9902,
+     highBeta: 10671,
+     lowGamma: 3763,
+     highGamma: 2151 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 40, meditation: 61 },
+  eegPower:
+   { delta: 21093,
+     theta: 9443,
+     lowAlpha: 2690,
+     highAlpha: 15978,
+     lowBeta: 6819,
+     highBeta: 8510,
+     lowGamma: 2955,
+     highGamma: 1150 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 47, meditation: 48 },
+  eegPower:
+   { delta: 33229,
+     theta: 11281,
+     lowAlpha: 10414,
+     highAlpha: 9676,
+     lowBeta: 11039,
+     highBeta: 6848,
+     lowGamma: 1125,
+     highGamma: 1286 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 44, meditation: 51 },
+  eegPower:
+   { delta: 12240,
+     theta: 12980,
+     lowAlpha: 24483,
+     highAlpha: 8453,
+     lowBeta: 11391,
+     highBeta: 4639,
+     lowGamma: 2273,
+     highGamma: 1198 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 48, meditation: 54 },
+  eegPower:
+   { delta: 17726,
+     theta: 9579,
+     lowAlpha: 7022,
+     highAlpha: 10238,
+     lowBeta: 6275,
+     highBeta: 9885,
+     lowGamma: 1669,
+     highGamma: 1865 },
+  poorSignalLevel: 0 }
+{ eSense: { attention: 35, meditation: 67 },
+  eegPower:
+   { delta: 6177,
+     theta: 9220,
+     lowAlpha: 35670,
+     highAlpha: 13350,
+     lowBeta: 3316,
+     highBeta: 4803,
+     lowGamma: 1180,
+     highGamma: 1012 },
+  poorSignalLevel: 0 }
+{ blinkStrength: 53 }
+{ eSense: { attention: 14, meditation: 53 },
+  eegPower:
+   { delta: 295989,
+     theta: 416605,
+     lowAlpha: 53968,
+     highAlpha: 19210,
+     lowBeta: 21726,
+     highBeta: 9294,
+     lowGamma: 3377,
+     highGamma: 2908 },
+  poorSignalLevel: 0 }
