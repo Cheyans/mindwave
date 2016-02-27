@@ -10,6 +10,9 @@ var client = neurosky.createClient({
   high_alpha_previous = 0;
   attention_previous = 0;
   meditation_previous = 0;
+
+
+
 // bind receive data event
 client.on('data',function(data){
   // if websocket server is running
@@ -23,6 +26,7 @@ client.on('data',function(data){
   var meditation = [];
   var tick = 5;
 
+
   //console.log("whoops");
   if(data.poorSignalLevel < 25 && data.eSense.attention > 0 
     && data.eSense.meditation > 0){
@@ -31,7 +35,12 @@ client.on('data',function(data){
     low_alpha.push(data.eegPower.low_alpha);
     attention.push(data.eSense.attention);
     meditation.push(data.eSense.meditation);
+    if(current_tick == tick){
+      //find average 
 
+
+      //then push results to a command on the device
+    }
 
     }
 
