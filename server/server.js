@@ -13,7 +13,9 @@ client.on('data',function(data){
 		// broadcast this latest data packet to all connected clients
 		wss.broadcast(data);
 	}
-	console.log(data);
+  //console.log("whoops");
+  if(data.eegPower.delta > 1000)
+	   console.log(data);
 });
 // initiate connection
 client.connect();
@@ -26,13 +28,15 @@ var wss = new WebSocketServer({port: 8080});
 // broadcast function (broadcasts message to all clients)
 wss.broadcast = function(data) {
     for(var i in this.clients)
-        this.clients[i].send(JSON.stringify(data));
+        this.clients[i].send(data);
 };
 
 // bind each connection
 wss.on('connection', function(ws) {
     ws.on('message', function(message) {
-        console.log('[CLIENT] %s', message);
+      //filter out any bad data
+
+      console.log('[CLIENT]  %s', message);
     });
     ws.send('You are connected to Mindwave Mobile');
 });

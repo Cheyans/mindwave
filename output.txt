@@ -1,0 +1,2 @@
+{ poorSignalLevel: 200, status: 'scanning' }
+{ poorSignalLevel: 200, status: 'scanning' }
