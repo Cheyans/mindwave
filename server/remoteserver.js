@@ -9,8 +9,13 @@ var wssOutgoing = new WebSocketServer({
 })
 
 wssIncome.on('connection', function connection(ws) {
+  console.log("connection Incoming");
   wssIncome.on('message', function incoming(message) {
     console.log(message);
     wssOutgoing.send(message);
   });
+});
+
+wssOutgoing.on('connection', function connection(ws) {
+  console.log("connection Outgoing")
 });
