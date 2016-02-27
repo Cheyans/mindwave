@@ -6,16 +6,35 @@ var client = neurosky.createClient({
 	appKey:'0fc4141b4b45c675cc8d3a765b8d71c5bde9390'
 })
 
+  current_tick = 0;
+  high_alpha_previous = 0;
+  attention_previous = 0;
+  meditation_previous = 0;
 // bind receive data event
 client.on('data',function(data){
-	// if websocket server is running
-	if(wss){
-		// broadcast this latest data packet to all connected clients
-		wss.broadcast(data);
-	}
+  // if websocket server is running
+  if(wss){
+    // broadcast this latest data packet to all connected clients
+    wss.broadcast(data);
+  }
+  var high_alpha = [];
+  var low_alpha = [];
+  var attention = [];
+  var meditation = [];
+  var tick = 5;
+
   //console.log("whoops");
-  if(data.eegPower.delta > 1000)
-	   console.log(data);
+  if(data.poorSignalLevel < 25 && data.eSense.attention > 0 
+    && data.eSense.meditation > 0){
+    current_tick++;
+    high_alpha.push(data.eegPower.high_alpha);
+    low_alpha.push(data.eegPower.low_alpha);
+    attention.push(data.eSense.attention);
+    meditation.push(data.eSense.meditation);
+
+
+    }
+
 });
 // initiate connection
 client.connect();
