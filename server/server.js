@@ -6,12 +6,10 @@ var client = neurosky.createClient({
 	appKey:'0fc4141b4b45c675cc8d3a765b8d71c5bde9390'
 })
 
-  current_tick = 0;
-  high_alpha_previous = 0;
-  attention_previous = 0;
-  meditation_previous = 0;
-
-
+current_tick = 0;
+tick = 5;
+attention = [];
+meditation = [];
 
 // bind receive data event
 client.on('data',function(data){
@@ -20,26 +18,35 @@ client.on('data',function(data){
     // broadcast this latest data packet to all connected clients
     wss.broadcast(data);
   }
-  var high_alpha = [];
-  var low_alpha = [];
-  var attention = [];
-  var meditation = [];
-  var tick = 5;
+  //var high_alpha = [];
+  //var low_alpha = [];
+  
 
 
   //console.log("whoops");
   if(data.poorSignalLevel < 25 && data.eSense.attention > 0 
     && data.eSense.meditation > 0){
     current_tick++;
-    high_alpha.push(data.eegPower.high_alpha);
-    low_alpha.push(data.eegPower.low_alpha);
     attention.push(data.eSense.attention);
     meditation.push(data.eSense.meditation);
-    if(current_tick == tick){
+    if(current_tick % tick == 0){
       //find average 
+      var med_sum = 0;  
+      for(var data : meditation)
+        med_sum += data.meditation;
+      var atten_sum = 0;  
+      for(var data : attention)
+        atten_sum += data.attention;
+      
+      var med_avg = med_sum/tick;
+      var atten_avg = med_sum/tick;
 
+      attention = [];
+      meditation = [];
 
       //then push results to a command on the device
+      console.log("average meditation was"+ med_avg);
+      console.log("average attention was"+ atten_avg);
     }
 
     }
